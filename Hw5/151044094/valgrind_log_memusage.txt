@@ -1,0 +1,375 @@
+==2816== Memcheck, a memory error detector
+==2816== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==2816== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==2816== Command: ./grepSh 13th t2
+==2816== 
+--2816-- Valgrind options:
+--2816--    --tool=memcheck
+--2816--    -v
+--2816-- Contents of /proc/version:
+--2816--   Linux version 3.13.0-83-generic (buildd@lgw01-55) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #127-Ubuntu SMP Fri Mar 11 00:25:37 UTC 2016
+--2816-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3
+--2816-- Page sizes: currently 4096, max supported 4096
+--2816-- Valgrind library directory: /usr/lib/valgrind
+--2816-- Reading syms from /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh
+--2816-- Reading syms from /lib/x86_64-linux-gnu/ld-2.19.so
+--2816--   Considering /lib/x86_64-linux-gnu/ld-2.19.so ..
+--2816--   .. CRC mismatch (computed 46abf574 wanted 3ca2d3ca)
+--2816--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so ..
+--2816--   .. CRC is valid
+--2816-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--2816--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--2816--   .. CRC mismatch (computed 4f1eed43 wanted a323a3ab)
+--2816--    object doesn't have a symbol table
+--2816--    object doesn't have a dynamic symbol table
+--2816-- Scheduler: using generic scheduler lock implementation.
+--2816-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==2816== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-2816-by-bufuak-on-???
+==2816== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-2816-by-bufuak-on-???
+==2816== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-2816-by-bufuak-on-???
+==2816== 
+==2816== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==2816== don't want to do, unless you know exactly what you're doing,
+==2816== or are doing some strange experiment):
+==2816==   /usr/lib/valgrind/../../bin/vgdb --pid=2816 ...command...
+==2816== 
+==2816== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==2816==   /path/to/gdb ./grepSh
+==2816== and then give GDB the following command
+==2816==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=2816
+==2816== --pid is optional if only one valgrind process is running
+==2816== 
+--2816-- REDIR: 0x4019c50 (ld-linux-x86-64.so.2:strlen) redirected to 0x380764b1 (???)
+--2816-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--2816--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--2816--   .. CRC mismatch (computed fc68135e wanted 45f5e986)
+--2816--    object doesn't have a symbol table
+--2816-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--2816--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--2816--   .. CRC mismatch (computed ae683f7e wanted 08c06df2)
+--2816--    object doesn't have a symbol table
+==2816== WARNING: new redirection conflicts with existing -- ignoring it
+--2816--     old: 0x04019c50 (strlen              ) R-> (0000.0) 0x380764b1 ???
+--2816--     new: 0x04019c50 (strlen              ) R-> (2007.0) 0x04c2e1a0 strlen
+--2816-- REDIR: 0x4019a00 (ld-linux-x86-64.so.2:index) redirected to 0x4c2dd50 (index)
+--2816-- REDIR: 0x4019c20 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2f2f0 (strcmp)
+--2816-- REDIR: 0x401a970 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31da0 (mempcpy)
+--2816-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.19.so
+--2816--   Considering /lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--2816--   .. CRC mismatch (computed 88040ace wanted 71b58165)
+--2816--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--2816--   .. CRC is valid
+--2816-- Reading syms from /lib/x86_64-linux-gnu/libc-2.19.so
+--2816--   Considering /lib/x86_64-linux-gnu/libc-2.19.so ..
+--2816--   .. CRC mismatch (computed ac9b5ddb wanted a10d05bf)
+--2816--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so ..
+--2816--   .. CRC is valid
+--2816-- REDIR: 0x50e1c50 (libc.so.6:strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--2816-- REDIR: 0x50e3f40 (libc.so.6:strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--2816-- REDIR: 0x50e1420 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--2816-- REDIR: 0x50df6b0 (libc.so.6:rindex) redirected to 0x4c2da30 (rindex)
+--2816-- REDIR: 0xffffffffff600000 (???:???) redirected to 0x38076493 (???)
+--2816-- REDIR: 0x50d7660 (libc.so.6:malloc) redirected to 0x4c2ab10 (malloc)
+--2816-- REDIR: 0x50e0300 (libc.so.6:__GI_strstr) redirected to 0x4c32030 (__strstr_sse2)
+--2816-- REDIR: 0x50dd9b0 (libc.so.6:strlen) redirected to 0x4c2e0e0 (strlen)
+--2816-- REDIR: 0x50e1290 (libc.so.6:__GI_memmove) redirected to 0x4c31660 (__GI_memmove)
+--2816-- REDIR: 0x50dd3f0 (libc.so.6:strcpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--2816-- REDIR: 0x50f1a80 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4c2e1c0 (strcpy)
+--2816-- REDIR: 0x50dbb10 (libc.so.6:strcat) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--2816-- REDIR: 0x50f48a0 (libc.so.6:__strcat_sse2_unaligned) redirected to 0x4c2dd90 (strcat)
+--2816-- REDIR: 0x50d7d00 (libc.so.6:free) redirected to 0x4c2bd80 (free)
+==2821== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2821==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2821==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821== 
+--2822-- REDIR: 0x50d8130 (libc.so.6:calloc) redirected to 0x4c2cbf0 (calloc)
+==2824== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2824==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2824==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824== 
+--2823-- REDIR: 0x50d8130 (libc.so.6:calloc) redirected to 0x4c2cbf0 (calloc)
+==2825== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2825==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2825==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825== 
+==2822== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-2822-by-bufuak-on-???
+==2822== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-2822-by-bufuak-on-???
+==2822== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-2822-by-bufuak-on-???
+==2822== 
+==2822== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==2822== don't want to do, unless you know exactly what you're doing,
+==2822== or are doing some strange experiment):
+==2822==   /usr/lib/valgrind/../../bin/vgdb --pid=2822 ...command...
+==2822== 
+==2822== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==2822==   /path/to/gdb ./grepSh
+==2822== and then give GDB the following command
+==2822==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=2822
+==2822== --pid is optional if only one valgrind process is running
+==2822== 
+--2822-- REDIR: 0x50e89b0 (libc.so.6:strchrnul) redirected to 0x4c319b0 (strchrnul)
+==2824== 
+==2824== HEAP SUMMARY:
+==2824==     in use at exit: 99,016 bytes in 12 blocks
+==2824==   total heap usage: 21 allocs, 9 frees, 328,728 bytes allocated
+==2824== 
+==2824== Searching for pointers to 12 not-freed blocks
+==2824== Checked 105,144 bytes
+==2824== 
+==2824== LEAK SUMMARY:
+==2824==    definitely lost: 0 bytes in 0 blocks
+==2824==    indirectly lost: 0 bytes in 0 blocks
+==2824==      possibly lost: 0 bytes in 0 blocks
+==2824==    still reachable: 99,016 bytes in 12 blocks
+==2824==         suppressed: 0 bytes in 0 blocks
+==2824== Rerun with --leak-check=full to see details of leaked memory
+==2824== 
+==2824== Use --track-origins=yes to see where uninitialised values come from
+==2824== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2824== 
+==2824== 1 errors in context 1 of 1:
+==2824== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2824==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2824==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2824== 
+==2824== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2821== 
+==2821== HEAP SUMMARY:
+==2821==     in use at exit: 99,016 bytes in 12 blocks
+==2821==   total heap usage: 21 allocs, 9 frees, 328,728 bytes allocated
+==2821== 
+==2821== Searching for pointers to 12 not-freed blocks
+==2821== Checked 105,144 bytes
+==2821== 
+==2821== LEAK SUMMARY:
+==2821==    definitely lost: 0 bytes in 0 blocks
+==2821==    indirectly lost: 0 bytes in 0 blocks
+==2821==      possibly lost: 0 bytes in 0 blocks
+==2821==    still reachable: 99,016 bytes in 12 blocks
+==2821==         suppressed: 0 bytes in 0 blocks
+==2821== Rerun with --leak-check=full to see details of leaked memory
+==2821== 
+==2821== Use --track-origins=yes to see where uninitialised values come from
+==2821== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2821== 
+==2821== 1 errors in context 1 of 1:
+==2821== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2821==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2821==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2821== 
+==2821== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2823== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-2823-by-bufuak-on-???
+==2823== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-2823-by-bufuak-on-???
+==2823== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-2823-by-bufuak-on-???
+==2823== 
+==2823== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==2823== don't want to do, unless you know exactly what you're doing,
+==2823== or are doing some strange experiment):
+==2823==   /usr/lib/valgrind/../../bin/vgdb --pid=2823 ...command...
+==2823== 
+==2823== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==2823==   /path/to/gdb ./grepSh
+==2823== and then give GDB the following command
+==2823==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=2823
+==2823== --pid is optional if only one valgrind process is running
+==2823== 
+--2823-- REDIR: 0x50e89b0 (libc.so.6:strchrnul) redirected to 0x4c319b0 (strchrnul)
+==2825== 
+==2825== HEAP SUMMARY:
+==2825==     in use at exit: 132,103 bytes in 16 blocks
+==2825==   total heap usage: 26 allocs, 10 frees, 394,631 bytes allocated
+==2825== 
+==2825== Searching for pointers to 16 not-freed blocks
+==2825== Checked 105,760 bytes
+==2825== 
+==2825== LEAK SUMMARY:
+==2825==    definitely lost: 0 bytes in 0 blocks
+==2825==    indirectly lost: 0 bytes in 0 blocks
+==2825==      possibly lost: 0 bytes in 0 blocks
+==2825==    still reachable: 132,103 bytes in 16 blocks
+==2825==         suppressed: 0 bytes in 0 blocks
+==2825== Rerun with --leak-check=full to see details of leaked memory
+==2825== 
+==2825== Use --track-origins=yes to see where uninitialised values come from
+==2825== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2825== 
+==2825== 1 errors in context 1 of 1:
+==2825== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2825==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2825==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2825== 
+==2825== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+--2822-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--2822--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--2822--   .. CRC mismatch (computed 6116126e wanted 54e3f1f2)
+--2822--    object doesn't have a symbol table
+--2823-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--2823--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--2823--   .. CRC mismatch (computed 6116126e wanted 54e3f1f2)
+--2823--    object doesn't have a symbol table
+==2823== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2823==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2823==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823== 
+--2822-- Discarding syms at 0x601dab0-0x602d985 in /lib/x86_64-linux-gnu/libgcc_s.so.1 due to munmap()
+--2823-- Discarding syms at 0x601dab0-0x602d985 in /lib/x86_64-linux-gnu/libgcc_s.so.1 due to munmap()
+==2822== 
+==2822== HEAP SUMMARY:
+==2822==     in use at exit: 99,016 bytes in 12 blocks
+==2822==   total heap usage: 29 allocs, 17 frees, 331,509 bytes allocated
+==2822== 
+==2822== Searching for pointers to 12 not-freed blocks
+==2822== Checked 105,144 bytes
+==2822== 
+==2822== LEAK SUMMARY:
+==2822==    definitely lost: 0 bytes in 0 blocks
+==2822==    indirectly lost: 0 bytes in 0 blocks
+==2822==      possibly lost: 0 bytes in 0 blocks
+==2822==    still reachable: 99,016 bytes in 12 blocks
+==2822==         suppressed: 0 bytes in 0 blocks
+==2822== Rerun with --leak-check=full to see details of leaked memory
+==2822== 
+==2822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2823== 
+==2823== HEAP SUMMARY:
+==2823==     in use at exit: 99,016 bytes in 12 blocks
+==2823==   total heap usage: 29 allocs, 17 frees, 331,509 bytes allocated
+==2823== 
+==2823== Searching for pointers to 12 not-freed blocks
+==2823== Checked 105,144 bytes
+==2823== 
+==2823== LEAK SUMMARY:
+==2823==    definitely lost: 0 bytes in 0 blocks
+==2823==    indirectly lost: 0 bytes in 0 blocks
+==2823==      possibly lost: 0 bytes in 0 blocks
+==2823==    still reachable: 99,016 bytes in 12 blocks
+==2823==         suppressed: 0 bytes in 0 blocks
+==2823== Rerun with --leak-check=full to see details of leaked memory
+==2823== 
+==2823== Use --track-origins=yes to see where uninitialised values come from
+==2823== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2823== 
+==2823== 1 errors in context 1 of 1:
+==2823== Syscall param msgctl(msqid) contains uninitialised byte(s)
+==2823==    at 0x5150D57: msgctl (syscall-template.S:81)
+==2823==    by 0x402166: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x401EA2: listdir (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823==    by 0x40132B: main (in /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 5/151044094/grepSh)
+==2823== 
+==2823== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==2820== 
+==2820== HEAP SUMMARY:
+==2820==     in use at exit: 66,200 bytes in 9 blocks
+==2820==   total heap usage: 17 allocs, 8 frees, 263,096 bytes allocated
+==2820== 
+==2820== Searching for pointers to 9 not-freed blocks
+==2820== Checked 104,680 bytes
+==2820== 
+==2820== LEAK SUMMARY:
+==2820==    definitely lost: 0 bytes in 0 blocks
+==2820==    indirectly lost: 0 bytes in 0 blocks
+==2820==      possibly lost: 0 bytes in 0 blocks
+==2820==    still reachable: 66,200 bytes in 9 blocks
+==2820==         suppressed: 0 bytes in 0 blocks
+==2820== Rerun with --leak-check=full to see details of leaked memory
+==2820== 
+==2820== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2820== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2819== 
+==2819== HEAP SUMMARY:
+==2819==     in use at exit: 33,384 bytes in 6 blocks
+==2819==   total heap usage: 13 allocs, 7 frees, 197,464 bytes allocated
+==2819== 
+==2819== Searching for pointers to 6 not-freed blocks
+==2819== Checked 104,224 bytes
+==2819== 
+==2819== LEAK SUMMARY:
+==2819==    definitely lost: 0 bytes in 0 blocks
+==2819==    indirectly lost: 0 bytes in 0 blocks
+==2819==      possibly lost: 0 bytes in 0 blocks
+==2819==    still reachable: 33,384 bytes in 6 blocks
+==2819==         suppressed: 0 bytes in 0 blocks
+==2819== Rerun with --leak-check=full to see details of leaked memory
+==2819== 
+==2819== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2819== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2818== 
+==2818== HEAP SUMMARY:
+==2818==     in use at exit: 568 bytes in 3 blocks
+==2818==   total heap usage: 9 allocs, 6 frees, 131,832 bytes allocated
+==2818== 
+==2818== Searching for pointers to 3 not-freed blocks
+==2818== Checked 103,768 bytes
+==2818== 
+==2818== LEAK SUMMARY:
+==2818==    definitely lost: 0 bytes in 0 blocks
+==2818==    indirectly lost: 0 bytes in 0 blocks
+==2818==      possibly lost: 0 bytes in 0 blocks
+==2818==    still reachable: 568 bytes in 3 blocks
+==2818==         suppressed: 0 bytes in 0 blocks
+==2818== Rerun with --leak-check=full to see details of leaked memory
+==2818== 
+==2818== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2818== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--2816-- REDIR: 0x50e89b0 (libc.so.6:strchrnul) redirected to 0x4c319b0 (strchrnul)
+--2816-- REDIR: 0x50e6670 (libc.so.6:__GI_memcpy) redirected to 0x4c2fc90 (__GI_memcpy)
+Successful! All the log can be found in log.txt
+Total number of 13th found:	3
+Number of directories searched:	9
+Number of files searched:	2
+Number of lines searched:	3308
+Number of cascade threads created:	1
+Number of search threads created:	2
+Max # of threads running concurrently:	1
+Total run time, in milliseconds:	1026.00
+Exit condition:(normal)
+==2816== 
+==2816== HEAP SUMMARY:
+==2816==     in use at exit: 0 bytes in 0 blocks
+==2816==   total heap usage: 5 allocs, 5 frees, 66,200 bytes allocated
+==2816== 
+==2816== All heap blocks were freed -- no leaks are possible
+==2816== 
+==2816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
