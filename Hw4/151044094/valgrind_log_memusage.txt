@@ -1,0 +1,190 @@
+==17341== Helgrind, a thread error detector
+==17341== Copyright (C) 2007-2013, and GNU GPL'd, by OpenWorks LLP et al.
+==17341== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==17341== Command: ./grepTh 13th t2
+==17341== 
+--17341-- Valgrind options:
+--17341--    --tool=helgrind
+--17341--    -v
+--17341-- Contents of /proc/version:
+--17341--   Linux version 3.13.0-83-generic (buildd@lgw01-55) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #127-Ubuntu SMP Fri Mar 11 00:25:37 UTC 2016
+--17341-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3
+--17341-- Page sizes: currently 4096, max supported 4096
+--17341-- Valgrind library directory: /usr/lib/valgrind
+--17341-- Reading syms from /home/bufuak/Masaüstü/Sistem Ödevler/Ödev 4/151044094/grepTh
+--17341-- Reading syms from /lib/x86_64-linux-gnu/ld-2.19.so
+--17341--   Considering /lib/x86_64-linux-gnu/ld-2.19.so ..
+--17341--   .. CRC mismatch (computed 46abf574 wanted 3ca2d3ca)
+--17341--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so ..
+--17341--   .. CRC is valid
+--17341-- Reading syms from /usr/lib/valgrind/helgrind-amd64-linux
+--17341--   Considering /usr/lib/valgrind/helgrind-amd64-linux ..
+--17341--   .. CRC mismatch (computed b7da3108 wanted 91022791)
+--17341--    object doesn't have a symbol table
+--17341--    object doesn't have a dynamic symbol table
+--17341-- Scheduler: using generic scheduler lock implementation.
+--17341-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==17341== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-17341-by-bufuak-on-???
+==17341== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-17341-by-bufuak-on-???
+==17341== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-17341-by-bufuak-on-???
+==17341== 
+==17341== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==17341== don't want to do, unless you know exactly what you're doing,
+==17341== or are doing some strange experiment):
+==17341==   /usr/lib/valgrind/../../bin/vgdb --pid=17341 ...command...
+==17341== 
+==17341== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==17341==   /path/to/gdb ./grepTh
+==17341== and then give GDB the following command
+==17341==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=17341
+==17341== --pid is optional if only one valgrind process is running
+==17341== 
+--17341-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--17341--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--17341--   .. CRC mismatch (computed fc68135e wanted 45f5e986)
+--17341--    object doesn't have a symbol table
+--17341-- Reading syms from /usr/lib/valgrind/vgpreload_helgrind-amd64-linux.so
+--17341--   Considering /usr/lib/valgrind/vgpreload_helgrind-amd64-linux.so ..
+--17341--   .. CRC mismatch (computed f83b20a9 wanted 38719776)
+--17341--    object doesn't have a symbol table
+--17341-- REDIR: 0x4019a00 (ld-linux-x86-64.so.2:index) redirected to 0x4c33e70 (index)
+--17341-- REDIR: 0x4019c20 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c34d10 (strcmp)
+--17341-- REDIR: 0x4019c50 (ld-linux-x86-64.so.2:strlen) redirected to 0x4c340a0 (strlen)
+--17341-- REDIR: 0x401a970 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c36d50 (mempcpy)
+--17341-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.19.so
+--17341--   Considering /lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--17341--   .. CRC mismatch (computed 88040ace wanted 71b58165)
+--17341--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libpthread-2.19.so ..
+--17341--   .. CRC is valid
+==17341== WARNING: new redirection conflicts with existing -- ignoring it
+--17341--     old: 0x04e4a120 (pthread_spin_init   ) W-> (0000.0) 0x04c33020 pthread_spin_init
+--17341--     new: 0x04e4a120 (pthread_spin_init   ) W-> (0000.0) 0x04c33030 pthread_spin_unlock
+--17341-- Reading syms from /lib/x86_64-linux-gnu/libc-2.19.so
+--17341--   Considering /lib/x86_64-linux-gnu/libc-2.19.so ..
+--17341--   .. CRC mismatch (computed ac9b5ddb wanted a10d05bf)
+--17341--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so ..
+--17341--   .. CRC is valid
+--17341-- REDIR: 0x50e7c50 (libc.so.6:strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--17341-- REDIR: 0x50e9f40 (libc.so.6:strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--17341-- REDIR: 0x50e7420 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--17341-- REDIR: 0x50e56b0 (libc.so.6:rindex) redirected to 0x4c33b50 (rindex)
+--17341-- REDIR: 0xffffffffff600000 (???:???) redirected to 0x3805f363 (???)
+--17341-- REDIR: 0x50dd660 (libc.so.6:malloc) redirected to 0x4c2bf30 (malloc)
+--17341-- REDIR: 0x50e6300 (libc.so.6:__GI_strstr) redirected to 0x4c36ed0 (__strstr_sse2)
+--17341-- REDIR: 0x4e472b0 (libpthread.so.0:pthread_mutex_init) redirected to 0x4c32000 (pthread_mutex_init)
+--17341-- REDIR: 0x50e39b0 (libc.so.6:strlen) redirected to 0x4c33fe0 (strlen)
+--17341-- REDIR: 0x50e7290 (libc.so.6:__GI_memmove) redirected to 0x4c36790 (__GI_memmove)
+--17341-- REDIR: 0x50e33f0 (libc.so.6:strcpy) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--17341-- REDIR: 0x50f7a80 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4c340c0 (strcpy)
+--17341-- REDIR: 0x50e1b10 (libc.so.6:strcat) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--17341-- REDIR: 0x50fa8a0 (libc.so.6:__strcat_sse2_unaligned) redirected to 0x4c33eb0 (strcat)
+--17341-- REDIR: 0x50ddd00 (libc.so.6:free) redirected to 0x4c2d1a0 (free)
+--17350-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17350-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+--17352-- REDIR: 0x4e45430 (libpthread.so.0:pthread_create@@GLIBC_2.2.5) redirected to 0x4c31db0 (pthread_create@*)
+--17351-- REDIR: 0x4e45430 (libpthread.so.0:pthread_create@@GLIBC_2.2.5) redirected to 0x4c31db0 (pthread_create@*)
+--17353-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17353-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+==17350== 
+==17350== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17350== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17354-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+==17353== 
+==17353== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17353== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17354-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+--17351-- REDIR: 0x50de130 (libc.so.6:calloc) redirected to 0x4c2e010 (calloc)
+--17352-- REDIR: 0x50de130 (libc.so.6:calloc) redirected to 0x4c2e010 (calloc)
+==17354== 
+==17354== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17354== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17351-- REDIR: 0x4e465b0 (libpthread.so.0:pthread_join) redirected to 0x4c31dc0 (pthread_join)
+--17352-- REDIR: 0x4e465b0 (libpthread.so.0:pthread_join) redirected to 0x4c31dc0 (pthread_join)
+==17351== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-17351-by-bufuak-on-???
+==17351== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-17351-by-bufuak-on-???
+==17351== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-17351-by-bufuak-on-???
+==17351== 
+==17351== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==17351== don't want to do, unless you know exactly what you're doing,
+==17351== or are doing some strange experiment):
+==17351==   /usr/lib/valgrind/../../bin/vgdb --pid=17351 ...command...
+==17351== 
+==17351== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==17351==   /path/to/gdb ./grepTh
+==17351== and then give GDB the following command
+==17351==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=17351
+==17351== --pid is optional if only one valgrind process is running
+==17351== 
+--17351-- REDIR: 0x50ee9b0 (libc.so.6:strchrnul) redirected to 0x4c36ae0 (strchrnul)
+==17352== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-17352-by-bufuak-on-???
+==17352== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-17352-by-bufuak-on-???
+==17352== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-17352-by-bufuak-on-???
+==17352== 
+==17352== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==17352== don't want to do, unless you know exactly what you're doing,
+==17352== or are doing some strange experiment):
+==17352==   /usr/lib/valgrind/../../bin/vgdb --pid=17352 ...command...
+==17352== 
+==17352== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==17352==   /path/to/gdb ./grepTh
+==17352== and then give GDB the following command
+==17352==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=17352
+==17352== --pid is optional if only one valgrind process is running
+==17352== 
+--17352-- REDIR: 0x50ee9b0 (libc.so.6:strchrnul) redirected to 0x4c36ae0 (strchrnul)
+--17352-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17352-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+--17352-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--17352--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--17352--   .. CRC mismatch (computed 6116126e wanted 54e3f1f2)
+--17352--    object doesn't have a symbol table
+--17351-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17351-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+--17351-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--17351--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--17351--   .. CRC mismatch (computed 6116126e wanted 54e3f1f2)
+--17351--    object doesn't have a symbol table
+==17352== 
+==17352== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+--17352-- 
+--17352-- used_suppression:      1 helgrind-glibc2X-005 /usr/lib/valgrind/default.supp:933
+==17352== 
+==17352== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+==17351== 
+==17351== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+--17351-- 
+--17351-- used_suppression:      1 helgrind-glibc2X-005 /usr/lib/valgrind/default.supp:933
+==17351== 
+==17351== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+--17349-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17349-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+==17349== 
+==17349== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17349== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17348-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17348-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+==17348== 
+==17348== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17348== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17347-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17347-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+==17347== 
+==17347== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17347== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--17341-- REDIR: 0x50ee9b0 (libc.so.6:strchrnul) redirected to 0x4c36ae0 (strchrnul)
+--17341-- REDIR: 0x50ec670 (libc.so.6:__GI_memcpy) redirected to 0x4c35590 (__GI_memcpy)
+--17341-- REDIR: 0x4e47400 (libpthread.so.0:pthread_mutex_lock) redirected to 0x4c32360 (pthread_mutex_lock)
+--17341-- REDIR: 0x4e487b0 (libpthread.so.0:pthread_mutex_unlock) redirected to 0x4c32940 (pthread_mutex_unlock)
+Successful! All the log can be found in log.txt
+Total number of 13th found:	3
+Number of directories searched:	9
+Number of files searched:	2
+Number of lines searched:	3308
+Number of cascade threads created:	6
+Number of search threads created:	2
+Max # of threads running concurrently:	1
+Total run time, in milliseconds:	2778.00
+Exit condition:(normal)
+==17341== 
+==17341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==17341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
